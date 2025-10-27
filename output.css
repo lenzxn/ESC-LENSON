@@ -205,6 +205,44 @@ header nav {
   display: none;
 }
 
+.ourStory {
+  font-family: Roboto, sans-serif;
+  font-size: 28px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  background: #011827;
+  color: #fff;
+  padding: 2rem;
+}
+.ourStory p {
+  max-width: 632px;
+}
+.ourStory button {
+  border: 2px solid #8ACFE5;
+  border-radius: 4px;
+  padding: 1rem;
+  background: none;
+  color: #8ACFE5;
+  font-size: 24px;
+  width: 308px;
+}
+
+.promo-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.promo {
+  display: grid;
+  grid-template-columns: 1fr; /* image on top, text below */
+  gap: 1rem;
+}
+
 @media (min-width: 701px) {
   header {
     position: relative;
