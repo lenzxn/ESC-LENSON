@@ -368,8 +368,8 @@ main {
   margin-bottom: 5rem;
 }
 
-/* tablet and desktop */
-@media (min-width: 701px) {
+/* desktop */
+@media (min-width: 769px) {
   header {
     position: relative;
     z-index: 10;
