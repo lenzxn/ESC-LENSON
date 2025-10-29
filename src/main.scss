@@ -3,26 +3,29 @@
 *::after {
   box-sizing: border-box;
 }
+
 * {
   margin: 0;
 }
+
 html:focus-within {
   scroll-behavior: smooth;
 }
+
 body {
   min-height: 100dvh;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  font-family: Roboto, sans-serif;
 }
 
-//mobile first 
+/* mobile first */
 header {
   background-color: #011827;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-family: roboto, sans-serif;
 
   .brand {
     display: flex;
@@ -30,17 +33,17 @@ header {
 
     img {
       margin-left: 1rem;
-      height: 6rem;   
+      height: 6rem;
       width: auto;
     }
 
-    .logo-text {
+    .logoText {
       margin: 0.5rem 10px;
       color: #fff;
-      font-size: 24px; 
+      font-size: 24px;
       font-weight: 700;
       width: auto;
-      max-width: 6ch;
+      max-width: 6rem;
       white-space: normal;
       line-height: 1.05;
       display: inline-block;
@@ -55,8 +58,8 @@ header {
 .hero {
   img {
     width: 100%;
-  height: 100%;
-  object-fit: cover;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -67,219 +70,314 @@ header {
   flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
+
+  button {
+    width: 19rem;
+    font-weight: 700; 
+    font-size: 24px; 
+    padding: 15px 23px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btnOnline {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #36769D;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .btnOnsite {
+    color: #011827;
+    background: #8ACFE5;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
 }
 
-.buttons button {
-  width: 19rem;
-  font-family: Roboto, sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  padding: 15px 23px;
-  border-radius: 3px;
-  border: none;
-  cursor: pointer;
+.testimonials {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+
+  #testimonial-1 {
+    display: none;
+  }
 }
 
-.buttons #btnOnline {
-  background: none;
-  border: none; 
-  font-size: 16px;
-  color: #36769D;
-  text-decoration: underline;
-  cursor: pointer;
-}
+.testimonial {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 460px;
+  min-width: 300px;
+  margin-bottom: 5rem;
 
-.buttons #btnOnsite {
-  color: #011827;
-  background: #8ACFE5;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.testimonials{
-    display: flex;
-    margin-top: 2rem;
-    justify-content: center;
-
-    #testimonial1{
-        display: none;
-    }
-}
-
-.testimonial{
-    font-family: Roboto, sans-serif;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    max-width: 460px;
-    min-width: 300px;
-
-    img{
-        align-self: flex-start;
-        width: 73px;
-        height: 73px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
+  img {
+    align-self: flex-start;
+    width: 73px;
+    height: 73px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 }
 
 .testimonialsText {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  p:first-child {
+    font-size: 24px;
+    font-style: italic;
+  }
+
+  p:last-child {
+    max-width: 400px;
+    font-size: 18px;
+  }
+}
+
+.challenges {
+  text-align: center;
+  padding: 2rem 1rem;
+
+  .challengesTitle {
+    font-size: 32px;
+  }
+
+  .cardsContainer {
+    margin: 4rem; 
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    p:first-child{
-        font-size: 24px;
-        font-style: italic;
-    }
-
-    p:last-child{
-        max-width: 400px;
-        font-size: 18px;
-    }
-}
-
-.challenges{
-    font-family: Roboto, sans-serif;
-    text-align: center;
-    padding: 2rem 1rem;
-
-    .challengesTitle{
-        font-size: 32px;
-    }
-
-    .cardsContainer{
-        margin: 4rem 4rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2rem;
-
-        .card{
-            background:#fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            min-width: 363px;
-            max-width: 363px;
-            overflow: hidden;
-            height: 446px;
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-
-            .cardHeader img{
-                width: 100%;
-                aspect-ratio: 16/9;
-                object-fit: cover;
-            }
-
-            .cardContent{
-                padding: 1rem;
-                display: flex;
-                flex-direction: column;
-                gap: 0.5rem;
-                font-weight: 400;
-
-                h4{
-                    font-size: 28px;    
-                }
-
-                .participants{
-                    display: flex;
-                    align-items: center;
-                    color: #666;
-                    font-size: 14px;
-                }
-                
-                .stars img{
-                    color: #011827;
-                    width: 16px;
-                    height: 16px;
-                    margin-right: 0.3rem;  
-                }
-
-                .desc{
-                    font-size: 18px;
-                    margin-bottom: 1rem;
-                }
-
-                button{
-                    width: 11rem;
-                    height: 2.7rem;
-                    color: #fff;
-                    background: #E3170A;
-                    border: none;
-                    padding: 0.9rem 1rem;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    font-weight: 600;
-                    align-self: flex-end;
-                }
-            }
-
-               }
-    }
-
-     #card1, #card2{
-        display: none;
-    }
-}
-
-.ourStory{
-    font-family: Roboto, sans-serif;
-    font-size: 28px;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    text-align: center;
     gap: 2rem;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    background:#011827;
-    color: #fff;
-     padding: 2rem;
 
-    p{
-        max-width: 632px;
-    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      min-width: 363px;
+      max-width: 363px;
+      overflow: hidden;
+      height: 446px;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
 
-    button{
-        border: 2px solid #8ACFE5;
-        border-radius: 4px;
+      .cardHeader img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
+      .cardContent {
         padding: 1rem;
-        background: none;
-        color: #8ACFE5;
-        font-size: 24px;
-        width: 308px;
-    }
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        font-weight: 400;
 
+        h4 {
+          font-size: 28px;
+        }
+
+        .participants {
+          display: flex;
+          align-items: center;
+          color: #666;
+          font-size: 14px;
+        }
+
+        .stars img {
+          color: #011827;
+          width: 16px;
+          height: 16px;
+          margin-right: 0.3rem;
+        }
+
+        .desc {
+          font-size: 18px;
+          margin-bottom: 1rem;
+        }
+
+        button {
+          width: 11rem;
+          height: 2.7rem;
+          color: #fff;
+          background: #E3170A;
+          border: none;
+          padding: 0.9rem 1rem;
+          border-radius: 5px;
+          cursor: pointer;
+          font-weight: 700;
+          font-size: 16px;
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+
+  #card-1,
+  #card-2 {
+    display: none;
+  }
 }
 
-.promo-grid {
+.ourStory {
+  font-size: 28px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  background: #011827;
+  color: #fff;
+  padding: 2rem;
+
+  p {
+    max-width: 632px;
+  }
+
+  button {
+    border: 2px solid #8ACFE5;
+    border-radius: 4px;
+    padding: 1rem;
+    background: none;
+    color: #8ACFE5;
+    font-size: 24px;
+    width: 308px;
+  }
+}
+
+.promoGrid {
   display: grid;
   gap: 2rem;
 }
+
 .promo {
   display: grid;
-  grid-template-columns: 1fr; /* image on top, text below */
+  grid-template-columns: 1fr;
   gap: 1rem;
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
 }
 
-// tablet and desktop
+.promoText {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  h3 {
+    font-size: 32px;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 24px;
+    margin-bottom: 3rem;
+  }
+}
+
+button {
+  width: 308px;
+  height: 66px;
+  background: #E3170A;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+  font-size: 24px;
+  font-weight: 700; 
+}
+
+footer {
+  height: 566px;
+  background-color: #011827;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  color: #fff;
+  padding: 1.5rem;
+
+  .aboutUs {
+    margin-bottom: 3rem;
+
+    .aboutUsTitle {
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sitemapDiv {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    .sitemapTitle {
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+
+    .playOnline {
+      margin-top: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
+  .socialsDiv {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    .socialsTitle {
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
+}
+
+main {
+  margin-bottom: 5rem;
+}
+
+/* tablet and desktop */
 @media (min-width: 701px) {
   header {
     position: relative;
     z-index: 10;
 
     .brand {
-
-      img {
-        height: 6rem; 
-      }
-
-      .logo-text {
-        max-width: none; 
-        font-size: 40px; 
+      .logoText {
+        max-width: none;
+        font-size: 40px;
       }
     }
 
@@ -313,66 +411,146 @@ header {
       }
     }
   }
+
   .hero {
-     height: 640px;
-  position: relative; 
-}
+    height: 640px;
+    position: relative;
 
-.hero .buttons {
-  display: flex;
-  flex-direction: row;
-  margin-top: 12px;
-  position: absolute;
-  left: 50%;
-  bottom: -25px; 
-  transform: translateX(-50%);
-}
+    .buttons {
+      display: flex; 
+      flex-direction: row; 
+      margin-top: 12px;
+      position: absolute;
+      left: 50%;
+      bottom: -25px;
+      transform: translateX(-50%);
+    }
 
-.buttons{
-    flex-direction: row;
-}
+    .btnOnline {
+      color: #fff;
+      font-size: 24px;
+      background: #E3170A;
+      text-decoration: none;
+    }
+  }
 
-.buttons #btnOnline {
-  color: #fff;
-  font-size: 24px;
-  background:#E3170A;
-  text-decoration: none;
-}
-
-  
   .hero img {
     object-position: center 25%;
   }
-  
-  .testimonials #testimonial1{
-    display: flex;
+
+  .testimonials {
+    #testimonial-1 {
+      display: flex;
+    }
   }
 
-  .testimonial{
+  .testimonial {
     margin-top: 6rem;
     max-width: 550px;
-    
-    img{
-        height: 96px;
-        width: 96px;
+
+    img {
+      height: 96px;
+      width: 96px;
     }
   }
 
-  .challengesTitle{
-        font-size: 36px;
+  .challenges {
+    .buttons {
+      margin: 5rem 0 4rem 0;
     }
+  }
+
+  .challengesTitle {
+    font-size: 36px;
+  }
 
   .cardsContainer {
-    #card1, #card2{
-        display: flex;
+    #card-1,
+    #card-2 {
+      display: flex;
     }
 
-    
-    .participants{
-        justify-content: space-between; 
-                }
+    .participants {
+      justify-content: space-between;
+    }
+  }
+
+  .promoGrid {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 0; 
+  }
+
+  .promo {
+    display: contents;
+    margin-bottom: 12rem;
+
+    img,
+    .promoText {
+      height: 100%;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      border-radius: 0; 
+      display: block;
+    }
+  }
+
+  .promoText {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 7rem;
+    margin-right: 10rem;
+  }
+
+  /* reorder the second promo to create the alternating layout */
+  .promo:nth-of-type(2) {
+    img {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    .promoText {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  }
+
+  footer {
+    height: 462px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0; 
+
+    .aboutUs {
+      padding: 9rem;
+      margin-bottom: 0; 
+    }
+
+    .sitemapDiv {
+      margin-top: 2rem;  
+      margin-left: 8rem; 
+      margin-bottom: 0;  
+    }
+
+    .socialsDiv {
+      margin-top: 2rem; 
+    }
+
+    div {
+      width: 50%; 
+    }
+
+    .contact {
+      flex-direction: row; 
+    }
+  }
+
+  main {
+    margin-bottom: 8rem;
   }
 }
-
-
-

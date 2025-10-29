@@ -9,23 +9,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="output.css">
-    <title>ESC</title>
+    <title>Hacker Escape Rooms | ESC</title>
 </head>
 
 <body>
     <header class="site-header">
         <div class="brand">
-            <img src="/img/9096b17d9b644c0fb4a4ddeb82daf9e66c5240c5.png" alt="">
-            <h1 class="logo-text">Hacker Escape Rooms</h1>
+            <img src="/img/9096b17d9b644c0fb4a4ddeb82daf9e66c5240c5.png" alt="Hacker escape rooms logo">
+            <h1 class="logoText">Hacker Escape Rooms</h1>
         </div>
 
         <!-- <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false">
             <span class="sr-only"></span>☰
         </button> -->
 
-        <nav id="primary-nav" class="site-nav" aria-label="Primary">
+        <nav id="primary-nav" class="site-nav" aria-label="Primary" aria-current="page">
             <ul>
-                <li><a href="#">Play online</a></li>
+                <li><a href="#playOnline">Play online</a></li>
                 <li><a href="#features">Play on-site</a></li>
                 <li><a href="#about">The story</a></li>
                 <li><a href="#about">Contact us</a></li>
@@ -35,16 +35,16 @@
 
     </header>
     <div class="hero">
-        <img src="/img/image 2.png" alt="">
+        <img src="/img/image 2.png" alt="Hacker typing at a computer">
         <div class="buttons">
-            <button id="btnOnline">Online challenges</button>
-            <button id="btnOnsite">On-site challenges</button>
+            <button class="btnOnline">Online challenges</button>
+            <button class="btnOnsite">On-site challenges</button>
         </div>
     </div>
 
-    <main>
+    <main id="main">
         <section class="testimonials">
-            <article class="testimonial" id="testimonial1">
+            <article class="testimonial" id="testimonial-1">
                 <img src="./img/7a698a6fd15c9330d95c77c66222ba4a4eadd83f.png" alt="John Doe">
                 <div class="testimonialsText">
                     <p>This is a quote about how amazing this place is
@@ -52,7 +52,7 @@
                     <p>John Doe, Visited us in September 2021</p>
                 </div>
             </article>
-            <article class="testimonial" id="testimonial2">
+            <article class="testimonial" id="testimonial-2">
                 <img src="./img/7a698a6fd15c9330d95c77c66222ba4a4eadd83f.png" alt="John Doe">
                 <div class="testimonialsText">
                     <p>This is a quote about how amazing this place is
@@ -66,7 +66,26 @@
         <section class="challenges">
             <p class="challengesTitle">Popular challenges right now</p>
             <div class="cardsContainer">
-                <article class="card" id="card1">
+                <article class="card" id="card-1">
+                    <img class="cardHeader" src="./img/image 2.png" alt="Hacker typing at a computer">
+                    <div class="cardContent">
+                        <h4>Title of room (on-site)</h4>
+                        <p class="participants">
+                            <span class="stars">
+                                <img src="./img/Star 1.png" alt="star">
+                                <img src="./img/Star 1.png" alt="star">
+                                <img src="./img/Star 1.png" alt="star">
+                                <img src="./img/Star 1.png" alt="star">
+                                <img src="./img/Star 5.png" alt="star">
+                            </span>
+                            2-6 participants
+                        </p>
+                        <p class="desc">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam.
+                            Nemo nocere tibi erit, et non inimicos, et</p>
+                        <button>Book this room</button>
+                    </div>
+                </article>
+                <article class="card" id="card-2">
                     <img class="cardHeader" src="./img/image 2.png" alt="hacker">
                     <div class="cardContent">
                         <h4>Title of room (on-site)</h4>
@@ -85,26 +104,7 @@
                         <button>Book this room</button>
                     </div>
                 </article>
-                <article class="card" id="card2">
-                    <img class="cardHeader" src="./img/image 2.png" alt="hacker">
-                    <div class="cardContent">
-                        <h4>Title of room (on-site)</h4>
-                        <p class="participants">
-                            <span class="stars">
-                                <img src="./img/Star 1.png" alt="star">
-                                <img src="./img/Star 1.png" alt="star">
-                                <img src="./img/Star 1.png" alt="star">
-                                <img src="./img/Star 1.png" alt="star">
-                                <img src="./img/Star 5.png" alt="star">
-                            </span>
-                            2-6 participants
-                        </p>
-                        <p class="desc">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam.
-                            Nemo nocere tibi erit, et non inimicos, et</p>
-                        <button>Book this room</button>
-                    </div>
-                </article>
-                <article class="card" id="card3">
+                <article class="card" id="card-3">
                     <img class="cardHeader" src="./img/image 2.png" alt="hacker">
                     <div class="cardContent">
                         <h4>Title of room (on-site)</h4>
@@ -126,8 +126,8 @@
             </div>
 
             <div class="buttons">
-                <button id="btnOnline">Online challenges</button>
-                <button id="btnOnsite">On-site challenges</button>
+                <button class="btnOnline">Online challenges</button>
+                <button class="btnOnsite">On-site challenges</button>
             </div>
         </section>
 
@@ -138,35 +138,58 @@
                     vos omnino desit illud quo solo felicitatis libertatisque perficiuntur.</p>
             </div>
 
-            <button class="readOurStory">Read the full story</button>
+            <button class="readOurStoryBtn">Read the full story</button>
         </section>
 
-        <section class="promo-grid">
+        <section class="promoGrid">
             <div class="promo">
-                <img src="/img/kelly-sikkema-YK0HPwWDJ1I-unsplash 1.png" alt="People collaborating at work">
-                <div class="promo-text">
+                <img src="/img/nesa-by-makers-IgUR1iX0mqM-unsplash 1.png" alt="People collaborating at work">
+                <div class="promoText">
                     <h3>Play with your friends or build your team stronger at work</h3>
-                    <p>Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam.</p>
+                    <p>Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi
+                        erit, et non inimicos, et</p>
                     <button>Book on-site today</button>
                 </div>
             </div>
 
             <div class="promo">
-                <img src="/img/nesa-by-makers-IgUR1iX0mqM-unsplash 1.png" alt="Person coding on computer">
-                <div class="promo-text">
+                <img src="/img/kelly-sikkema-YK0HPwWDJ1I-unsplash 1.png" alt="Person coding on computer">
+                <div class="promoText">
                     <h3>Play online or visit our venue for one of our 25 escape rooms</h3>
-                    <p>Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam.</p>
+                    <p>Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi
+                        erit, et non inimicos, et</p>
                     <button>See all challenges</button>
                 </div>
             </div>
+
+
         </section>
-
-
-
-
-
-
     </main>
+    <footer>
+        <div class="aboutUs">
+            <p class="aboutUsTitle">[Esc] Hacker Escape Rooms</p>
+            <p>Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo spectant haec quoque
+                vos omnino desit illud quo solo felicitatis libertatisque perficiuntur.</p>
+        </div>
+        <div class="contact">
+            <div class="sitemapDiv">
+                <p class="sitemapTitle">Site map</p>
+                <a href="">The story</a>
+                <a href="">Contact us</a>
+                <a href="">Legal</a>
+                <a class="playOnline" href="">Play online</a>
+                <a href="">Play on-site</a>
+
+            </div>
+            <div class="socialsDiv">
+                <p class="socialsTitle">Follow us on</p>
+                <a href="">Facebook</a>
+                <a href="">Instagram</a>
+                <a href="">Twitter</a>
+            </div>
+        </div>
+
+    </footer>
 </body>
 
 </html>
