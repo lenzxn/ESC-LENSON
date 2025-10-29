@@ -1,7 +1,10 @@
 # ESC-LENSON
 HTML,SCSS &amp; CSS Project
 
-I det här projektet har jag valt att arbeta enligt principen mobile first, även om jag tidigare har utgått från desktop-design. Jag valde det här tillvägagångssättet eftersom det känns mest relevant i dagens digitala samhälle, där mobilanvändningen är så dominerande. Genom att börja med mobilversionen kunde jag bygga en stabil grund som sedan skalades upp till desktopformat med hjälp av en media query.
+I det här projektet har jag valt att arbeta enligt principen mobile first, även om jag
+tidigare har utgått från desktop-design. Jag valde det här tillvägagångssättet eftersom det 
+känns mest relevant i dagens digitala samhälle, där mobilanvändningen är så dominerande. Genom 
+att börja med mobilversionen kunde jag bygga en stabil grund som sedan skalades upp till desktopformat med hjälp av en media query.
 
 Jag har använt SCSS som mitt huvudsakliga verktyg för att strukturera och skriva min CSS. Jag tycker att SCSS gör arbetet både effektivare och roligare tack vare sin logiska struktur och möjligheten att nästla element. Det gör koden mer lättläst och hanterbar. Jag har valt att fokusera på en ren och organiserad kod, utan att lägga till mixins eller mer avancerade SCSS-funktioner, eftersom projektets omfattning inte krävde det i det här skedet.
 
